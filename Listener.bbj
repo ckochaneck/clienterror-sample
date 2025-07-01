@@ -1,0 +1,12 @@
+use cloud.basis.interfaces.MyListenerIF
+
+class public Listener implements MyListenerIF
+    method public Listener()
+    methodend
+
+    method public void onEventTriggered(Object@ mine!)
+    methodend
+
+    method public void onEventTriggered(Object mine!)
+    methodend
+classend

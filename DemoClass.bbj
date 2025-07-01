@@ -1,0 +1,32 @@
+use cloud.basis.MyTest
+use cloud.basis.interfaces.MyListenerIF
+use java.util.Map
+
+use ::Listener.bbj::Listener
+
+class public DemoClass
+    field private BBjNumber count = 0
+    field private BBjStaticText counter!
+    field private MyTest@ test!
+
+    method public DemoClass()
+        declare BBjSysGui sysGui!
+        declare BBjWindow wnd!
+
+        test! = new MyTest@()
+
+        #test! = CAST(MyTest@, test!)
+
+        sysGui! = BBjAPI().openSysGui("X0")
+        wnd! = sysgui!.addWindow(0,0,300,300, "", $01001001$)
+
+        listener! = new Listener()
+
+        #test!.addActionEventListener(listener!)
+    methodend
+
+classend
+
+declare DemoClass demoClass!
+demoClass! = new DemoClass()
+process_events
