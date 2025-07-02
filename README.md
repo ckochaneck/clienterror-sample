@@ -8,4 +8,7 @@ Step 3.
 Create a classpath using the demo-package-1.0.jar and bbj_internal
 
 Step 4.
-Create an App Deployment in the em using DemoClass.bbj as Program File.
+Create an App Deployment.
+Program File: DemoClass.bbj.
+Config: Default config.bbx.
+Classpath: Add the demo-package-1.0.jar to a custom classpath or bbj_default and use the related classpath (custom or bbj_default).
